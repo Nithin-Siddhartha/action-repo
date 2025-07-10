@@ -1,9 +1,18 @@
-# action-repo
-### 📁 Test Files Summary
-These files were used to simulate GitHub events for the webhook:
+# GitHub Action Repo
 
-- `dev-push.txt`: Pushed to `dev` branch to test push webhook.
-- `merge-demo.txt`: Used in a pull request from `dev` to `main` to test merge webhook.
-- `push-test2.txt`, `push-test3.txt`, `push-test4.txt`: Additional push tests to validate event capture in MongoDB.
+This repo is used to test GitHub webhooks by triggering events like:
 
-All these were captured successfully via our Flask webhook handler and logged in MongoDB Compass.
+- Push
+- Pull Request
+- Merge
+
+These events are captured by the Flask server in the [`webhook-repo`](https://github.com/Nithin-Siddhartha/webhook-repo) and logged in MongoDB.
+
+### 🔍 Test Files
+
+- `dev-test.txt`: Pull request test
+- `merge_test.txt`: Merge test
+- `test2.txt`: Push test
+- `test3.txt`, `test4.txt`: Initial merge tests (treated as push)
+
+This repo is part of a webhook integration demo.
